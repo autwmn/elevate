@@ -1259,7 +1259,6 @@
     go('about');
   }
 
-  // keyboard access on the landing lockup
   document.getElementById('lockup').addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); enterSite(); }
   });
@@ -1340,7 +1339,6 @@
     }
     window.heroGo = function(i){ show(i); restart(); };
 
-    // tap the left/right side of the photo to change it
     hero.style.cursor = 'pointer';
     hero.addEventListener('click', (e) => {
       if (e.target.classList.contains('hdot')) return;
@@ -1357,7 +1355,7 @@
     }
 
     show(0);
-    if (imgs.length > 1) restart();  // keeps auto-rotating; a click just resets the timer
+    if (imgs.length > 1) restart();
   })();
 </script>
 
